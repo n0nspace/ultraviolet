@@ -27,8 +27,6 @@ $(document).ready(function() {
     // callback
   });
 
-  feather.replace();
-
   function openTab(attr, tab) {
     var page = $(tab + attr);
 
@@ -95,6 +93,6 @@ $(document).ready(function() {
 
   toggleSwitch.addEventListener('change', switchTheme, false);
 
-
+feather.replace();
 
 }); /*document ready*/
