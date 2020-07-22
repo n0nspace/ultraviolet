@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-    <!--ULTRAVIOLET by @nonspace.
+    <!--INFRARED / ULTRAVIOLET by @nonspace.
     Find more of my work at https://nonspace.tumblr.com
 
     Don't steal.
@@ -21,7 +21,7 @@
   {block:Hidden}
   <meta name="theme-color" content="">
 
-  <meta name="image:Sidebar Portrait" content="" />
+  <meta name="image:Sidebar Portrait" content="https://64.media.tumblr.com/107a9c27b0df43b495f9bef56554e345/2f9f35e643b96103-fe/s2048x3072/02de42e262c5651ea8032f7cb25961a4ec38e170.jpg" />
 
   <meta name="if:Archive Link" content="0"/>
   <meta name="if:Show Avatar" content="1"/>
@@ -36,7 +36,6 @@
   <!--default-->
   <meta name="color:Text" content="#5b5956" />
   <meta name="color:Headline Color" content="#605f5e" />
-  <meta name="color:Background" content="#f8fafb" />
   <meta name="color:Sidebar Background" content="#fff" />
   <meta name="color:Post Background" content="#f4f4f4" />
   <meta name="color:Accent" content="#f29a9a" />
@@ -55,7 +54,7 @@
   <meta name="select:Post Width" title="500" content="500" />
   <meta name="select:Post Width" title="450" content="450" />
   <meta name="select:Post Width" title="400" content="400" />
-
+  
   <meta name="text:Font" content="Source Sans Pro" />
   <meta name="text:Font Two" content="PT Serif" />
 
@@ -63,18 +62,18 @@
   <meta name="text:Headline Size" content="32"/>
   <meta name="text:Line Height" content="150%"/>
   <meta name="text:Subtitle" content="lorem ipsum dolor sit amet."/>
-  <meta name="text:Side Title" content="lorem / ipsum."/>
+  <meta name="text:Side Title" content="Something/Title/Yeah"/>
   <meta name="text:Tag Label" content="tags:"/>
-
+  
   <meta name="text:Custom Link 1" content=""/>
   <meta name="text:Custom Link 1 URL" content=""/>
-
+  
   <meta name="text:Custom Link 2" content=""/>
   <meta name="text:Custom Link 2 URL" content=""/>
-
+  
   <meta name="text:Custom Link 3" content=""/>
   <meta name="text:Custom Link 3 URL" content=""/>
-
+  
   <meta name="text:Custom Link 4" content=""/>
   <meta name="text:Custom Link 4 URL" content=""/>
 
@@ -86,7 +85,7 @@
 
   <meta name="text:Social Three Icon" content="facebook"/>
   <meta name="text:Social Three URL" content=""/>
-
+  
   <meta name="image:About Page Image" content="" />
   <meta name="text:About Quote" content=""/>
   <meta name="text:About Cell 1 Title" content="name"/>
@@ -103,7 +102,7 @@
   <meta name="text:About Cell 6 Content" content=""/>
   <meta name="text:About Text" content=""/>
   <meta name="text:About Signature" content=""/>
-
+  
   <meta name="text:FAQ Page Title" content=""/>
   <meta name="text:FAQ Question 1" content=""/>
   <meta name="text:FAQ Answer 1" content=""/>
@@ -113,10 +112,10 @@
   <meta name="text:FAQ Answer 3" content=""/>
   <meta name="text:FAQ Question 4" content=""/>
   <meta name="text:FAQ Answer 4" content=""/>
-
+  
   <meta name="text:Ask Page Text" content=""/>
   <meta name="text:Submission Page Text" content=""/>
-
+  
   <meta name="image:Character Image" content=""/>
   <meta name="text:Character Page Label" content=""/>
   <meta name="text:Character Name" content=""/>
@@ -173,20 +172,10 @@
 
   <!--jQUERY-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-  <!--FEATHER ICONS-->
+  
   <script src="https://static.tumblr.com/2pnwama/DLppehqvd/feathericons.js"></script>
 
 <style>
-    
- /*Note on changing icons:
-  To change icons in the about cells, go to https://feathericons.com/ and download the svg from there and copy/paste it
-  here. Alternatively, go to the feathericons github page (linked on their website) find the icons in the icon folder
-  right click > view image > right click > view source code and copy paste it from there.
-    
-  To change the night/day mode icons you just need to insert the image link from the icon folder mentioned above and 
-  copy/paste it in the CSS for #sidebar_controls (or #mobile_controls for mobile menu). You'll see there's already
-  links to the svgs there.*/
 
 /*GENERAL*/
 
@@ -195,7 +184,7 @@
   --postWidth: {select:post width}px;
   --sidebarWidth: calc(50% - var(--barWidth));
   --barWidth: 80px;
-
+  
   --fontSize: {text:font size}px;
   --headlineSize: {text:headline size}px;
   --lineHeight: {text:line height};
@@ -204,11 +193,11 @@
   --fontFamily: '{text:font}';
   --fontFamilySecondary: '{text:font two}';
   --fontWeight: 500;
-
+  
   --background: {color:background};
   --sidebarBackground: {color:sidebar background};
   --postBackground: {color:post background};
-
+ 
   --accentColor: {color:accent};
   --accentText: {color:accent text};
   --accentLightColor: {color:accent light};
@@ -216,18 +205,18 @@
   --likedHeart: {color:accent};
   --captionLinks: {color:caption links};
   --characterName: {color:character name};
-
+  
   --photosetGutter: 10px;
 }
 
 [data-theme="dark"] {
   --textColor: rgb(200, 200, 200);
   --headlines: #e8e8e8;
-
+  
   --background: #171717;
   --sidebarBackground: #1f1f1f;
   --postBackground: #1a1a1a;
-
+  
   --accentColor: {color:accent dark};
   --accentText: {color:accent text dark};
   --accentLightColor: #888;
@@ -355,7 +344,7 @@ color:#000c1a;
   margin: 5px 0 5px 15px;
 }
 
-h3, h2, .npf_quote, .quote blockquote {
+h3, h2, .npf_quote {
   font-family: var(--fontFamilySecondary), sans-serif;
   font-size: var(--headlineSize);
 }
@@ -422,7 +411,7 @@ blockquote {
 
 #bar,
 aside {
-  border-right: 1px solid var(--postBorders);
+  border-right: 1px solid var(--postBorders); 
   background: var(--sidebarBackground);
 }
 
@@ -659,7 +648,7 @@ input#mobile_button:checked ~ #mobile_controls::before {
   max-width: 100%;
   -webkit-animation-duration: 1.2s;
   animation-name: fadeIn;
-  animation-duration: 1.2s;
+  animation-duration: 1.2s; 
   margin-left: calc(var(--sidebarWidth) + var(--barWidth));
   height: 100%;
   overflow-y: auto;
@@ -677,7 +666,7 @@ input#mobile_button:checked ~ #mobile_controls::before {
 .page_wrapper {
   width: 100%;
   min-height: 100vh;
-  background: var(--background);
+  background: var(--sidebarBackground);
   display: none;
 }
 
@@ -916,7 +905,7 @@ input#mobile_button:checked ~ #mobile_controls::before {
 
 .reblog_header a,
 .answerer_header a {
-  color: var(--accentColor);
+  color: var(--accentColor); 
 }
 
 .answerer_header a::before,
@@ -1571,8 +1560,8 @@ input#mobile_button:checked ~ #mobile_controls::before {
 /*faq*/
 .faq_page,
 .ask_page,
-.submit_page {
-  background-color: var(--postBackground);
+.sub_page {
+  background-color: var(--postBackground); 
 }
 
 .row .quest, .row .reply {
@@ -1673,7 +1662,7 @@ input#mobile_button:checked ~ #mobile_controls::before {
 .pos_traits, .neg_traits {
   margin-bottom: 25px;
 }
-
+  
 .ctraits ul:last-of-type {
   margin-bottom: 0px;
 }
@@ -1838,7 +1827,7 @@ input#mobile_button:checked ~ #mobile_controls::before {
 .row .quest,
 .pos_traits li,
 .neg_traits li,
-.cskills .track,
+.cskills .track, 
 .cskills .track span,
 .cconnections img,
 .cconnections .overlay {
@@ -1919,7 +1908,13 @@ aside,
   transition: all 0.5s ease;
 }
 
-/* MEDIA QUERIES*/
+/* MEDIA QUERIES*/ 
+
+@media only screen and (max-width: 1220px) {
+  aside .side_head .headlines {
+    font-size: 1.2rem;
+  }
+}
 
 @media only screen and (max-width: 850px) {
   aside {
@@ -1927,47 +1922,47 @@ aside,
     z-index: 8;
     width: calc(90vw - 54px);
   }
-
+  
   aside .side_head .headlines {
     font-size: 1.1rem;
   }
-
+  
   .side_author_right {
     flex-direction: column;
     text-align: left;
   }
-
+  
   aside .social {
     margin: 15px 0 0 0;
     display: none;
   }
-
+  
   aside .copyright {
     display: none;
   }
-
+  
   aside .pagination {
     position: fixed;
     z-index: 7;
     right: 0px;
     top: 0;
-    margin: 0 50px 0 0 !important;
-    padding: 15px;
+    margin: 0 0px 0 0 !important;
+    padding: 15px 50px 15px 15px;
     width: 100vw;
     max-width: 100vw;
     background: var(--sidebarBackground);
     justify-content: flex-end;
     display: flex;
   }
-
+  
   aside .side_banner {
     height: 100px;
   }
-
+  
   #mobile_controls {
     display: flex;
   }
-
+  
   input#mobile_button:checked ~ aside  {
     left: 0;
   }
@@ -1975,19 +1970,22 @@ aside,
   input#mobile_button:checked ~ #mobile_controls {
     left: calc(90vw - 54px);
   }
-
+  
   #content_wrapper {
     margin: 0 auto;
-  }
-
+  }    
+  
   #sidebar_controls {
     position: fixed;
     right: 15px;
+    left: unset;
     top: 15px;
     z-index: 8;
-    display: flex;
+    width: 24px;
+    height: 24px;
+    z-index: 99;
   }
-
+  
   .about_page table:first-of-type {
     margin-right: 0px;
   }
@@ -2038,15 +2036,15 @@ aside,
     <div id="side_title">
       {text:side title}
     </div>
-
+    
     <!--CREDIT-->
     <div id="nnspc"><a href="//nonspace.tumblr.com" target="_blank">n.</a></div>
   </div>
-
+  
     <!--MOBILE---------------------------------------------------------->
     <input id="mobile_button" type="checkbox" name="mobile-menu" aria-hidden="true" />
     <label id="mobile_controls" for="mobile_button" aria-hidden="true"></label>
-
+  
     <!--SIDEBAR-->
     <aside>
       <div id="aside_inner" class="flex flex-column">
@@ -2081,7 +2079,7 @@ aside,
               <p>{Description}</p>
               &copy; {CopyrightYears}
             </div>
-
+          
           <!-- PAGEINATION -->
           {block:Pagination}
           <div class="pagination flex">
@@ -2089,7 +2087,7 @@ aside,
           <span>{lang:CurrentPage of TotalPages}</span>{block:NextPage}<a class="page_link next_page" href="{NextPage}"><i data-feather="chevrons-right"></i></a>{/block:NextPage}
           </div>
           {/block:Pagination}
-
+            
             <!--sidebar menu-->
             <ul class="side_menu">
         <li><a href="/" title="{lang:Home}">{lang:Home}</a></li>
@@ -2129,18 +2127,17 @@ aside,
                 {/block:Pages}
                 {/block:HasPages}
               </ul>
-
+          
           <!--sidebar image-->
           {block:ifSidebarPortraitImage}
           <img class="side_banner" src="{image:sidebar portrait}">
           {/block:ifSidebarPortraitImage}
-
-      </div><!--aside_inner-->
+          
+      </div><!--aside_inner-->      
     </aside>
     <!--aside-->
-
+  
 <!--NAVIGATION END------------------------------------------------------>
-<!--POST CONTAINER------------------------------------------------------>
     <div id="content_wrapper" {block:PermalinkPage}class="permalink_page"{/block:PermalinkPage}>
         <div id="post_wrapper">
           <!--TAG & SEARCH RESULT INFO-->
@@ -2230,15 +2227,14 @@ aside,
         <!--post notes-->
         {block:PostNotes}<div class="plnotes">{PostNotes}</div>{/block:PostNotes}
       </div><!--permalink-->{/block:PermalinkPage}
-
+      
       {/block:Posts}
-
+      
         </div><!--post wrapper-->
-
+        
 <!----POSTS END--------------------------------------------------------->
-
+        
 <!----PAGES------------------------------------------------------------->
-    
         {block:IfAboutPage}
         <!--ABOUT PAGE-->
         <div id="info" class="page_wrapper about_page">
@@ -2251,7 +2247,6 @@ aside,
                       {block:IfAboutCell1Title}
                       <!--COPY HERE-->
                       <tr>
-                        <!--Change the post icon here if you want-->
                         <td class="post_icon"><svg class="feather"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
                         </td>
                         <td class="flex flex-column">
@@ -2260,9 +2255,6 @@ aside,
                         </td>
                       </tr>
                       <!--COPY END-->
-                      <!--To change icons in the about cells, go to https://feathericons.com/ and download the svg from there and copy/paste it
-                          here. Alternatively, go to the feathericons github page (linked on their website) find the icons in the icon folder
-                          right click > view image > right click > view source code and copy paste it from there.-->
                       {/block:IfAboutCell1Title}
                       {block:IfAboutCell2Title}
                       <tr>
@@ -2346,7 +2338,7 @@ aside,
           </div>
         </div><!--about page-->
         {/block:IfAboutPage}
-
+        
         <!--FAQ PAGE-->
         {block:IfFAQPage}
         <div id="faq" class="page_wrapper faq_page">
@@ -2378,7 +2370,7 @@ aside,
           </div><!--faq article wrapper-->
         </div><!--faq page-->
         {/block:IfFAQPage}
-
+        
         {block:IfCharacterPage}
         <!--CHARACTER PAGE-->
         <div id="character" class="page_wrapper character_page about_page">
@@ -2530,20 +2522,20 @@ aside,
                 <div class="bar">
                   <div class="track_label">{text:character skills 1 label}</div>
                   <div class="track"><span style="width: {text:character skills 1 percent}%;"></span></div>
-                </div>
+                </div> 
                 <!--COPY END-->
                 <div class="bar">
                   <div class="track_label">{text:character skills 2 label}</div>
                   <div class="track"><span style="width: {text:character skills 2 percent}%;"></span></div>
-                </div>
+                </div> 
                 <div class="bar">
                   <div class="track_label">{text:character skills 3 label}</div>
                   <div class="track"><span style="width: {text:character skills 3 percent}%;"></span></div>
-                </div>
+                </div> 
                 <div class="bar">
                   <div class="track_label">{text:character skills 4 label}</div>
                   <div class="track"><span style="width: {text:character skills 4 percent}%;"></span></div>
-                </div>
+                </div> 
                 <!--PASTE HERE-->
               </div><!--skills-->
               <!--text-->
@@ -2581,7 +2573,7 @@ aside,
           </div>
         </div><!--about page-->
         {/block:IfCharacterPage}
-
+        
         {block:AskEnabled}
         <!--ASK PAGE-->
         <div id="ask" class="page_wrapper ask_page">
@@ -2600,7 +2592,7 @@ aside,
           </div><!--ask article wrapper-->
         </div><!--ask page-->
         {/block:AskEnabled}
-
+        
         {block:SubmissionsEnabled}
         <!--SUBMISSION PAGE-->
         <div id="submission" class="page_wrapper sub_page">
@@ -2608,7 +2600,7 @@ aside,
             <article class="post">
               <h4 class="headlines">{SubmitLabel}</h4>
               {block:IfSubmissionPageText}
-              <div class="row caption">
+              <div class="row caption"> 
                 {text:Submission page text}
               </div>
               {/block:IfSubmissionPageText}
@@ -2623,14 +2615,14 @@ aside,
 
    </div><!--content_wrapper-->
 
-  </div>
+  </div>  
 
 <!--CONTAINER END------------------------------------------------------->
 
   <!--PXU PHOTOSETS-->
   <script async type="text/javascript" src="https://static.tumblr.com/hohmoxg/7D6q63tqk/pxuphotoset.min.js"></script>
   <link rel="stylesheet" href="https://static.tumblr.com/hohmoxg/pPfq63scf/style.css">
-
+  
   <!--ULTRAVIOLET SCRIPTS-->
   <script src="https://dl.dropboxusercontent.com/s/b8ns46i6g5iizto/ultraviolet.js"></script>
 
