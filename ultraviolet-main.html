@@ -4,6 +4,9 @@
     Find more of my work at https://nonspace.tumblr.com
 
     Don't steal.
+    Don't claim as your own.
+    Don't use as base code.
+    Editing for personal use is fine!-->
 
     -->
 
@@ -21,10 +24,9 @@
   {block:Hidden}
   <meta name="theme-color" content="">
 
-  <meta name="image:Sidebar Portrait" content="https://64.media.tumblr.com/107a9c27b0df43b495f9bef56554e345/2f9f35e643b96103-fe/s2048x3072/02de42e262c5651ea8032f7cb25961a4ec38e170.jpg" />
+  <meta name="image:Sidebar Portrait" content="" />
 
   <meta name="if:Archive Link" content="0"/>
-  <meta name="if:Show Avatar" content="1"/>
   <meta name="if:Border Radius" content="1"/>
   <meta name="if:Show Tags" content="1"/>
   <meta name="if:Night Mode" content="1"/>
@@ -36,6 +38,7 @@
   <!--default-->
   <meta name="color:Text" content="#5b5956" />
   <meta name="color:Headline Color" content="#605f5e" />
+  <meta name="color:Background" content="#f8fafb" />
   <meta name="color:Sidebar Background" content="#fff" />
   <meta name="color:Post Background" content="#f4f4f4" />
   <meta name="color:Accent" content="#f29a9a" />
@@ -344,12 +347,12 @@ color:#000c1a;
   margin: 5px 0 5px 15px;
 }
 
-h3, h2, .npf_quote, .quote blockquote {
+h3, h2, .npf_quote {
   font-family: var(--fontFamilySecondary), sans-serif;
   font-size: var(--headlineSize);
 }
 
-h1, h2, .headlines, .npf_quote, h3, h4, .quote blockquote {
+h1, h2, .headlines, .npf_quote, h3, h4 {
   text-align: left;
   line-height: 120%;
 }
@@ -392,7 +395,8 @@ blockquote {
   font-weight: bold;
   text-transform: lowercase;
   letter-spacing: 0.5px;
-  writing-mode: sideways-lr;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
   line-height: var(--barWidth);
   flex: 1;
   text-align: left;
@@ -666,7 +670,7 @@ input#mobile_button:checked ~ #mobile_controls::before {
 .page_wrapper {
   width: 100%;
   min-height: 100vh;
-  background: var(--sidebarBackground);
+  background: var(--background);
   display: none;
 }
 
@@ -1200,6 +1204,10 @@ input#mobile_button:checked ~ #mobile_controls::before {
   margin-right: 10px;
 }
 
+.date_wrapper {
+  align-items: center;
+}
+
 .date_notes {
   line-height: 100%;
 }
@@ -1232,6 +1240,12 @@ input#mobile_button:checked ~ #mobile_controls::before {
 .post_icon svg {
   width: 24px;
   height: 24px;
+}
+
+.post_icon.pinned {
+  font-size: 1rem;
+  margin-left: 15px;
+  font-weight: bold;
 }
 
 .buttons {
@@ -1421,29 +1435,28 @@ input#mobile_button:checked ~ #mobile_controls::before {
 .note.reblog::before,
 .note.reply::before {
   display: inline-block;
+  width: 1rem;
+  height: 1rem;
   margin-right: 5px;
   background-color: var(--headlines);
-  transform: scale(.7);
-  height: 23px;
-  width: 23px;
 }
 
 .note.reblog::before {
   content: "";
-  -webkit-mask: url("https://raw.githubusercontent.com/feathericons/feather/8263ca93c4b338dcfafed62321c27a88368ba7cc/icons/repeat.svg");
-  mask: url("https://raw.githubusercontent.com/feathericons/feather/8263ca93c4b338dcfafed62321c27a88368ba7cc/icons/repeat.svg");
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='1rem' height='1rem' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='17 1 21 5 17 9' /%3E%3Cpath d='M3 11V9a4 4 0 0 1 4-4h14' /%3E%3Cpolyline points='7 23 3 19 7 15' /%3E%3Cpath d='M21 13v2a4 4 0 0 1-4 4H3' /%3E%3C/svg%3E%0A");
+  mask: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='1rem' height='1rem' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='17 1 21 5 17 9' /%3E%3Cpath d='M3 11V9a4 4 0 0 1 4-4h14' /%3E%3Cpolyline points='7 23 3 19 7 15' /%3E%3Cpath d='M21 13v2a4 4 0 0 1-4 4H3' /%3E%3C/svg%3E%0A");
 }
 
 .note.like::before {
   content: "";
-  -webkit-mask: url("https://raw.githubusercontent.com/feathericons/feather/8263ca93c4b338dcfafed62321c27a88368ba7cc/icons/heart.svg");
-  mask: url("https://raw.githubusercontent.com/feathericons/feather/8263ca93c4b338dcfafed62321c27a88368ba7cc/icons/heart.svg");
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z' /%3E%3C/svg%3E%0A");
+  mask: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z' /%3E%3C/svg%3E%0A");
 }
 
 .note.reply::before {
   content: "";
-  -webkit-mask: url("dhttps://raw.githubusercontent.com/feathericons/feather/8263ca93c4b338dcfafed62321c27a88368ba7cc/icons/message-circle.svg");
-  mask: url("https://raw.githubusercontent.com/feathericons/feather/8263ca93c4b338dcfafed62321c27a88368ba7cc/icons/message-circle.svg");
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpath d='M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z' /%3E%3C/svg%3E%0A");
+  mask: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpath d='M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z' /%3E%3C/svg%3E%0A");
 }
 
 /*xkit*/
@@ -1561,7 +1574,7 @@ input#mobile_button:checked ~ #mobile_controls::before {
 /*faq*/
 .faq_page,
 .ask_page,
-.sub_page {
+.submit_page {
   background-color: var(--postBackground); 
 }
 
@@ -1918,10 +1931,19 @@ aside,
 }
 
 @media only screen and (max-width: 850px) {
+  iframe {
+    top: unset !important;
+    bottom: 0 !important;
+  }    
+    
   aside {
     left: calc(-90vw - 54px);
     z-index: 8;
     width: calc(90vw - 54px);
+  }
+  
+  #aside_inner {
+    padding-top: 80px;
   }
   
   aside .side_head .headlines {
@@ -1938,7 +1960,8 @@ aside,
     display: none;
   }
   
-  aside .copyright {
+  #aside_inner .headlines,
+  .side_banner {
     display: none;
   }
   
@@ -1956,12 +1979,9 @@ aside,
     display: flex;
   }
   
-  aside .side_banner {
-    height: 100px;
-  }
-  
   #mobile_controls {
     display: flex;
+    left: 0;
   }
   
   input#mobile_button:checked ~ aside  {
@@ -1989,6 +2009,28 @@ aside,
   
   .about_page table:first-of-type {
     margin-right: 0px;
+  }
+  
+  
+  .headlines.pdate a {
+    line-height: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .pinned {
+    display: none;
+  }
+
+  .date_wrapper {
+    align-items: center;
+  }
+  
+  .post_header .post_author {
+    font-size: 0.8rem;
+  }
+  
+  .audio_player {
+    margin: 0 auto;
   }
 }
 
@@ -2179,6 +2221,7 @@ aside,
                       {lang:Posted TimeAgo} {block:NotReblog}{Username}{/block:NotReblog}{block:RebloggedFrom}<a href="{ReblogRootURL}">@{ReblogRootName}</a>{/block:RebloggedFrom} {block:Author}{lang:By PostAuthorName 2}{/block:Author}{block:Submission}@<a href="{SubmitterURL}">{Submitter}</a>{/block:Submission}
                     </div>
                   </div><!--date notes wrapper-->
+                  {block:PinnedPostLabel}<div class="post_icon pinned">{PinnedPostLabel}</div>{/block:PinnedPostLabel}
                 </div><!--date wrapper-->
               </div><!--post header end-->
               <!--POST BODY-->
@@ -2540,11 +2583,11 @@ aside,
                 <!--PASTE HERE-->
               </div><!--skills-->
               <!--text-->
-              {block:IfCharacterText2}
+              {block:IfCharacterText 2}
               <div class="row caption">
                 {text:character text 2}
               </div>
-              {/block:IfCharacterText2}
+              {/block:IfCharacterText 2}
               <!--connections-->
               {block:IfConnection1IMG}
               <div class="row">
