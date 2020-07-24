@@ -2535,13 +2535,12 @@ aside,
               {/block:IfCharacterText}
               <!--traits-->
               <!--add new traits-->
+              {block:IfCharacterTraitPos1}
               <div class="ctraits row">
                 <ul class="pos_traits flex flex-wrap">
-                  {block:IfCharacterTraitPos1}
                   <!--COPY HERE-->
                   <li>{text:character trait pos 1}</li>
                   <!--COPY END-->
-                  {/block:IfCharacterTraitPos1}
                   {block:IfCharacterTraitPos2}
                   <li>{text:character trait pos 2}</li>
                   {/block:IfCharacterTraitPos2}
@@ -2563,6 +2562,7 @@ aside,
                   <!--PASTE HERE-->
                 </ul>
               </div>
+              {/block:IfCharacterTraitPos1}
               <!--skills-->
               <!--add new skills-->
               {block:IfCharacterSkills1Label}
