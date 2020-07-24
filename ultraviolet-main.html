@@ -2565,6 +2565,7 @@ aside,
               </div>
               <!--skills-->
               <!--add new skills-->
+              {block:IfCharacterSkills1Label}
               <div class="row cskills">
                 <!--COPY HERE-->
                 <div class="bar">
@@ -2572,20 +2573,27 @@ aside,
                   <div class="track"><span style="width: {text:character skills 1 percent}%;"></span></div>
                 </div> 
                 <!--COPY END-->
+                {block:IfCharacterSkills2Label}
                 <div class="bar">
                   <div class="track_label">{text:character skills 2 label}</div>
                   <div class="track"><span style="width: {text:character skills 2 percent}%;"></span></div>
                 </div> 
+                {/block:IfCharacterSkills2Label}
+                {block:IfCharacterSkills3Label}
                 <div class="bar">
                   <div class="track_label">{text:character skills 3 label}</div>
                   <div class="track"><span style="width: {text:character skills 3 percent}%;"></span></div>
                 </div> 
+                {/block:IfCharacterSkills3Label}
+                {block:IfCharacterSkills4Label}
                 <div class="bar">
                   <div class="track_label">{text:character skills 4 label}</div>
                   <div class="track"><span style="width: {text:character skills 4 percent}%;"></span></div>
                 </div> 
+                {/block:IfCharacterSkills4Label}
                 <!--PASTE HERE-->
               </div><!--skills-->
+              {/block:IfCharacterSkills1Label}
               <!--text-->
               {block:IfCharacterText2}
               <div class="row caption">
